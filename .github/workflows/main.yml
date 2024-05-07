@@ -12,7 +12,9 @@ jobs:
   make-package-lock: 
     name: make package lock
     runs-on: ubuntu-22.04
-    run: npm install --package-lock-only
+    steps:
+      - id: packagelock
+        run: npm install --package-lock-only
   deploy:
     runs-on: ubuntu-latest
     steps:
